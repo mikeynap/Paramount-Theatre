@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5771EA713A3279700D8208D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5771EA613A3279700D8208D /* UIKit.framework */; };
+		F5771EA913A3279700D8208D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5771EA813A3279700D8208D /* Foundation.framework */; };
+		F5771EAB13A3279700D8208D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5771EAA13A3279700D8208D /* CoreGraphics.framework */; };
+		F5771EB113A3279700D8208D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5771EAF13A3279700D8208D /* InfoPlist.strings */; };
+		F5771EB413A3279700D8208D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5771EB313A3279700D8208D /* main.m */; };
+		F5771EB713A3279700D8208D /* Paramount_TheatreAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5771EB613A3279700D8208D /* Paramount_TheatreAppDelegate.m */; };
+		F5771EBA13A3279700D8208D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5771EB813A3279700D8208D /* MainWindow.xib */; };
+		F5771EBD13A3279700D8208D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5771EBC13A3279700D8208D /* RootViewController.m */; };
+		F5771EC013A3279700D8208D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5771EBE13A3279700D8208D /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5771EA213A3279700D8208D /* Paramount Theatre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paramount Theatre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5771EA613A3279700D8208D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F5771EA813A3279700D8208D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5771EAA13A3279700D8208D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */ = {isa = PBXFileReference; path = "Paramount Theatre-Info.plist"; sourceTree = "<group>"; };
+		F5771EB013A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5771EB213A3279700D8208D /* Paramount Theatre-Prefix.pch */ = {isa = PBXFileReference; path = "Paramount Theatre-Prefix.pch"; sourceTree = "<group>"; };
+		F5771EB313A3279700D8208D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5771EB513A3279700D8208D /* Paramount_TheatreAppDelegate.h */ = {isa = PBXFileReference; path = Paramount_TheatreAppDelegate.h; sourceTree = "<group>"; };
+		F5771EB613A3279700D8208D /* Paramount_TheatreAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Paramount_TheatreAppDelegate.m; sourceTree = "<group>"; };
+		F5771EB913A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F5771EBB13A3279700D8208D /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		F5771EBC13A3279700D8208D /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F5771EBF13A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5771E9F13A3279700D8208D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5771EA713A3279700D8208D /* UIKit.framework in Frameworks */,
+				F5771EA913A3279700D8208D /* Foundation.framework in Frameworks */,
+				F5771EAB13A3279700D8208D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5771E9713A3279700D8208D = {
+			isa = PBXGroup;
+			children = (
+				F5771EAC13A3279700D8208D /* Paramount Theatre */,
+				F5771EA513A3279700D8208D /* Frameworks */,
+				F5771EA313A3279700D8208D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5771EA313A3279700D8208D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5771EA213A3279700D8208D /* Paramount Theatre.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5771EA513A3279700D8208D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5771EA613A3279700D8208D /* UIKit.framework */,
+				F5771EA813A3279700D8208D /* Foundation.framework */,
+				F5771EAA13A3279700D8208D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5771EAC13A3279700D8208D /* Paramount Theatre */ = {
+			isa = PBXGroup;
+			children = (
+				F5771EB513A3279700D8208D /* Paramount_TheatreAppDelegate.h */,
+				F5771EB613A3279700D8208D /* Paramount_TheatreAppDelegate.m */,
+				F5771EB813A3279700D8208D /* MainWindow.xib */,
+				F5771EBB13A3279700D8208D /* RootViewController.h */,
+				F5771EBC13A3279700D8208D /* RootViewController.m */,
+				F5771EBE13A3279700D8208D /* RootViewController.xib */,
+				F5771EAD13A3279700D8208D /* Supporting Files */,
+			);
+			path = "Paramount Theatre";
+			sourceTree = "<group>";
+		};
+		F5771EAD13A3279700D8208D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */,
+				F5771EAF13A3279700D8208D /* InfoPlist.strings */,
+				F5771EB213A3279700D8208D /* Paramount Theatre-Prefix.pch */,
+				F5771EB313A3279700D8208D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5771EA113A3279700D8208D /* Paramount Theatre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5771EC313A3279700D8208D /* Build configuration list for PBXNativeTarget "Paramount Theatre" */;
+			buildPhases = (
+				F5771E9E13A3279700D8208D /* Sources */,
+				F5771E9F13A3279700D8208D /* Frameworks */,
+				F5771EA013A3279700D8208D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Paramount Theatre";
+			productName = "Paramount Theatre";
+			productReference = F5771EA213A3279700D8208D /* Paramount Theatre.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5771E9913A3279700D8208D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F5771E9C13A3279700D8208D /* Build configuration list for PBXProject "Paramount Theatre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5771E9713A3279700D8208D;
+			productRefGroup = F5771EA313A3279700D8208D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5771EA113A3279700D8208D /* Paramount Theatre */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5771EA013A3279700D8208D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5771EB113A3279700D8208D /* InfoPlist.strings in Resources */,
+				F5771EBA13A3279700D8208D /* MainWindow.xib in Resources */,
+				F5771EC013A3279700D8208D /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5771E9E13A3279700D8208D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5771EB413A3279700D8208D /* main.m in Sources */,
+				F5771EB713A3279700D8208D /* Paramount_TheatreAppDelegate.m in Sources */,
+				F5771EBD13A3279700D8208D /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5771EAF13A3279700D8208D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5771EB013A3279700D8208D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5771EB813A3279700D8208D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5771EB913A3279700D8208D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F5771EBE13A3279700D8208D /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5771EBF13A3279700D8208D /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5771EC113A3279700D8208D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5771EC213A3279700D8208D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		F5771EC413A3279700D8208D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Paramount Theatre/Paramount Theatre-Prefix.pch";
+				INFOPLIST_FILE = "Paramount Theatre/Paramount Theatre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F5771EC513A3279700D8208D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Paramount Theatre/Paramount Theatre-Prefix.pch";
+				INFOPLIST_FILE = "Paramount Theatre/Paramount Theatre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5771E9C13A3279700D8208D /* Build configuration list for PBXProject "Paramount Theatre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5771EC113A3279700D8208D /* Debug */,
+				F5771EC213A3279700D8208D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5771EC313A3279700D8208D /* Build configuration list for PBXNativeTarget "Paramount Theatre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5771EC413A3279700D8208D /* Debug */,
+				F5771EC513A3279700D8208D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5771E9913A3279700D8208D /* Project object */;
+}
