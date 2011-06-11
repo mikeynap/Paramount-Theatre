@@ -16,6 +16,7 @@
 		F5771EBA13A3279700D8208D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5771EB813A3279700D8208D /* MainWindow.xib */; };
 		F5771EBD13A3279700D8208D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5771EBC13A3279700D8208D /* RootViewController.m */; };
 		F5771EC013A3279700D8208D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5771EBE13A3279700D8208D /* RootViewController.xib */; };
+		F5771EC713A32C6B00D8208D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F5771EC613A32C6B00D8208D /* icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		F5771EBB13A3279700D8208D /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F5771EBC13A3279700D8208D /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F5771EBF13A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		F5771EC613A32C6B00D8208D /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		F5771EAD13A3279700D8208D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5771EC613A32C6B00D8208D /* icon.icns */,
 				F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */,
 				F5771EAF13A3279700D8208D /* InfoPlist.strings */,
 				F5771EB213A3279700D8208D /* Paramount Theatre-Prefix.pch */,
@@ -151,6 +154,7 @@
 				F5771EB113A3279700D8208D /* InfoPlist.strings in Resources */,
 				F5771EBA13A3279700D8208D /* MainWindow.xib in Resources */,
 				F5771EC013A3279700D8208D /* RootViewController.xib in Resources */,
+				F5771EC713A32C6B00D8208D /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
