@@ -23,14 +23,14 @@
 		F5771EA613A3279700D8208D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F5771EA813A3279700D8208D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5771EAA13A3279700D8208D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */ = {isa = PBXFileReference; path = "Paramount Theatre-Info.plist"; sourceTree = "<group>"; };
+		F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Paramount Theatre-Info.plist"; sourceTree = "<group>"; };
 		F5771EB013A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F5771EB213A3279700D8208D /* Paramount Theatre-Prefix.pch */ = {isa = PBXFileReference; path = "Paramount Theatre-Prefix.pch"; sourceTree = "<group>"; };
+		F5771EB213A3279700D8208D /* Paramount Theatre-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Paramount Theatre-Prefix.pch"; sourceTree = "<group>"; };
 		F5771EB313A3279700D8208D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F5771EB513A3279700D8208D /* Paramount_TheatreAppDelegate.h */ = {isa = PBXFileReference; path = Paramount_TheatreAppDelegate.h; sourceTree = "<group>"; };
+		F5771EB513A3279700D8208D /* Paramount_TheatreAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Paramount_TheatreAppDelegate.h; sourceTree = "<group>"; };
 		F5771EB613A3279700D8208D /* Paramount_TheatreAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Paramount_TheatreAppDelegate.m; sourceTree = "<group>"; };
 		F5771EB913A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		F5771EBB13A3279700D8208D /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		F5771EBB13A3279700D8208D /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F5771EBC13A3279700D8208D /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F5771EBF13A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
