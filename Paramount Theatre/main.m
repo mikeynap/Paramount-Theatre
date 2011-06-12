@@ -12,8 +12,6 @@ int main(int argc, char *argv[])
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
-    NSArray *data = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://paramountlive.org/iPhone.php"]];
-    NSLog(@"%@", data);
     int retVal = UIApplicationMain(argc, argv, nil, nil);
     
     [pool release];

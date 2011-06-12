@@ -7,8 +7,29 @@
 //
 
 #import "RootViewController.h"
+#import "ShowSubView.h"
 
 @implementation RootViewController
+
+- (void)awakeFromNib{
+    events = [[NSMutableArray alloc] init];
+    ShowSubView *view = [[ShowSubView alloc] init];
+    view.title = @"Test";
+    NSArray *data = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://paramountlive.org/iPhone.php"]];
+    for (NSDictionary *dict in data){
+        [events addObject: [NSDictionary dictionaryWithObjectsAndKeys:[dict objectForKey:@"title"] , @"title", view, @"controller",  nil]];
+        
+    }
+    [view release];
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title = @"Back";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    [temporaryBarButtonItem release];
+    self.title = @"Paramount Theatre Events";
+
+    
+    
+}
 
 - (void)viewDidLoad
 {
@@ -51,7 +72,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [events count];
 }
 
 // Customize the appearance of table view cells.
@@ -65,6 +86,7 @@
     }
 
     // Configure the cell.
+    [[cell textLabel] setText:[[events objectAtIndex:indexPath.row] objectForKey:@"title"]];
     return cell;
 }
 
@@ -111,13 +133,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+
+    UIViewController *targetViewController = [[events objectAtIndex: indexPath.row] objectForKey:@"controller"];
+    [[self navigationController] pushViewController:targetViewController animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning

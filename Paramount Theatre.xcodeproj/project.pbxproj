@@ -17,6 +17,8 @@
 		F5771EBD13A3279700D8208D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5771EBC13A3279700D8208D /* RootViewController.m */; };
 		F5771EC013A3279700D8208D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5771EBE13A3279700D8208D /* RootViewController.xib */; };
 		F5771EC713A32C6B00D8208D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F5771EC613A32C6B00D8208D /* icon.icns */; };
+		F5A8F2C413A479A00059DC89 /* ShowSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A8F2C213A479A00059DC89 /* ShowSubView.m */; };
+		F5A8F2C513A479A00059DC89 /* ShowSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A8F2C313A479A00059DC89 /* ShowSubView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		F5771EBC13A3279700D8208D /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F5771EBF13A3279700D8208D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		F5771EC613A32C6B00D8208D /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		F5A8F2C113A479A00059DC89 /* ShowSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSubView.h; sourceTree = "<group>"; };
+		F5A8F2C213A479A00059DC89 /* ShowSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSubView.m; sourceTree = "<group>"; };
+		F5A8F2C313A479A00059DC89 /* ShowSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowSubView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 				F5771EAC13A3279700D8208D /* Paramount Theatre */,
 				F5771EA513A3279700D8208D /* Frameworks */,
 				F5771EA313A3279700D8208D /* Products */,
+				F5A8F2BF13A4782F0059DC89 /* New Group */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +94,9 @@
 				F5771EBC13A3279700D8208D /* RootViewController.m */,
 				F5771EBE13A3279700D8208D /* RootViewController.xib */,
 				F5771EAD13A3279700D8208D /* Supporting Files */,
+				F5A8F2C113A479A00059DC89 /* ShowSubView.h */,
+				F5A8F2C213A479A00059DC89 /* ShowSubView.m */,
+				F5A8F2C313A479A00059DC89 /* ShowSubView.xib */,
 			);
 			path = "Paramount Theatre";
 			sourceTree = "<group>";
@@ -102,6 +111,14 @@
 				F5771EB313A3279700D8208D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5A8F2BF13A4782F0059DC89 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			path = "Paramount Theatre";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +172,7 @@
 				F5771EBA13A3279700D8208D /* MainWindow.xib in Resources */,
 				F5771EC013A3279700D8208D /* RootViewController.xib in Resources */,
 				F5771EC713A32C6B00D8208D /* icon.icns in Resources */,
+				F5A8F2C513A479A00059DC89 /* ShowSubView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +186,7 @@
 				F5771EB413A3279700D8208D /* main.m in Sources */,
 				F5771EB713A3279700D8208D /* Paramount_TheatreAppDelegate.m in Sources */,
 				F5771EBD13A3279700D8208D /* RootViewController.m in Sources */,
+				F5A8F2C413A479A00059DC89 /* ShowSubView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +299,7 @@
 				F5771EC513A3279700D8208D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
