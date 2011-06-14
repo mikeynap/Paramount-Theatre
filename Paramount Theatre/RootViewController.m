@@ -30,6 +30,8 @@
     
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,8 +44,19 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    int i = 0;
+    for (NSDictionary *dict in events){
+        for (ShowSubView *view in dict){
+             if (i < 10){
+                  [self performSelectorInBackground:@selector(downloadInfoInBackground:) withObject:view];
+                  i++;
+             }
+        }
+    }
     [super viewDidAppear:animated];
 }
+
+- (
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -157,6 +170,10 @@
 
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+}
+
+- (void)performSelectorInBackground:(SEL)aSelector withObject:(id)arg{
+    [arg getData];
 }
 
 - (void)dealloc
