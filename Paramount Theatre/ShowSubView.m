@@ -39,12 +39,16 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)getData{
+    show = [[MNShow alloc] initWithId:uid];
+    loaded = TRUE;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
-    loaded = TRUE;
-    show = [[MNShow alloc] initWithId:uid];
+    if (!loaded) [self getData];
     [text setText:show.description];
     text.font = [UIFont fontWithName:@"Helvetica" size:15];
     [titleLabel setText:show.title];
