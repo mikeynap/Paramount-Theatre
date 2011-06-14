@@ -7,7 +7,7 @@
 //
 
 #import "ShowSubView.h"
-
+#import "MNShow.h"
 
 @implementation ShowSubView
 
@@ -17,6 +17,12 @@
     if (self) {
         // Custom initialization
     }
+    return self;
+}
+
+- (id) initWithId:(int)_uid{
+    self = [super init];
+    uid = _uid;
     return self;
 }
 
@@ -37,7 +43,11 @@
 
 - (void)viewDidLoad
 {
+    loaded = TRUE;
+    show = [[MNShow alloc] initWithId:uid];
     [super viewDidLoad];
+    [text setText:show.description];
+    text.font = [UIFont fontWithName:@"Helvetica" size:15];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -53,5 +63,7 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+- (MNShow *)show{
+    return (loaded) ? show : nil;
+}
 @end

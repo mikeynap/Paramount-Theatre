@@ -19,6 +19,9 @@
 		F5771EC713A32C6B00D8208D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F5771EC613A32C6B00D8208D /* icon.icns */; };
 		F5A8F2C413A479A00059DC89 /* ShowSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A8F2C213A479A00059DC89 /* ShowSubView.m */; };
 		F5A8F2C513A479A00059DC89 /* ShowSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A8F2C313A479A00059DC89 /* ShowSubView.xib */; };
+		F5A8F2E013A5C93F0059DC89 /* MNShow.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A8F2DF13A5C93F0059DC89 /* MNShow.m */; };
+		F5A8F2E313A5D0A70059DC89 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A8F2E213A5D0A70059DC89 /* GTMNSString+HTML.m */; };
+		F5A8F2E513A7049E0059DC89 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A8F2E413A7049E0059DC89 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,11 @@
 		F5A8F2C113A479A00059DC89 /* ShowSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSubView.h; sourceTree = "<group>"; };
 		F5A8F2C213A479A00059DC89 /* ShowSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSubView.m; sourceTree = "<group>"; };
 		F5A8F2C313A479A00059DC89 /* ShowSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowSubView.xib; sourceTree = "<group>"; };
+		F5A8F2DE13A5C93F0059DC89 /* MNShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNShow.h; sourceTree = "<group>"; };
+		F5A8F2DF13A5C93F0059DC89 /* MNShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNShow.m; sourceTree = "<group>"; };
+		F5A8F2E113A5D0A70059DC89 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		F5A8F2E213A5D0A70059DC89 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		F5A8F2E413A7049E0059DC89 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 				F5A8F2C113A479A00059DC89 /* ShowSubView.h */,
 				F5A8F2C213A479A00059DC89 /* ShowSubView.m */,
 				F5A8F2C313A479A00059DC89 /* ShowSubView.xib */,
+				F5A8F2DE13A5C93F0059DC89 /* MNShow.h */,
+				F5A8F2DF13A5C93F0059DC89 /* MNShow.m */,
+				F5A8F2E113A5D0A70059DC89 /* GTMNSString+HTML.h */,
+				F5A8F2E213A5D0A70059DC89 /* GTMNSString+HTML.m */,
 			);
 			path = "Paramount Theatre";
 			sourceTree = "<group>";
@@ -105,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				F5771EC613A32C6B00D8208D /* icon.icns */,
+				F5A8F2E413A7049E0059DC89 /* icon.png */,
 				F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */,
 				F5771EAF13A3279700D8208D /* InfoPlist.strings */,
 				F5771EB213A3279700D8208D /* Paramount Theatre-Prefix.pch */,
@@ -173,6 +186,7 @@
 				F5771EC013A3279700D8208D /* RootViewController.xib in Resources */,
 				F5771EC713A32C6B00D8208D /* icon.icns in Resources */,
 				F5A8F2C513A479A00059DC89 /* ShowSubView.xib in Resources */,
+				F5A8F2E513A7049E0059DC89 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +201,8 @@
 				F5771EB713A3279700D8208D /* Paramount_TheatreAppDelegate.m in Sources */,
 				F5771EBD13A3279700D8208D /* RootViewController.m in Sources */,
 				F5A8F2C413A479A00059DC89 /* ShowSubView.m in Sources */,
+				F5A8F2E013A5C93F0059DC89 /* MNShow.m in Sources */,
+				F5A8F2E313A5D0A70059DC89 /* GTMNSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,12 +272,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Paramount Theatre/Paramount Theatre-Prefix.pch";
 				INFOPLIST_FILE = "Paramount Theatre/Paramount Theatre-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -270,11 +292,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Paramount Theatre/Paramount Theatre-Prefix.pch";
 				INFOPLIST_FILE = "Paramount Theatre/Paramount Theatre-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
