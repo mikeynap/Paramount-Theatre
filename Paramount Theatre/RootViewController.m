@@ -46,12 +46,10 @@
 {
     int i = 0;
     for (NSDictionary *dict in events){
-        for (ShowSubView *view in dict){
-             if (i < 10){
-                  [self performSelectorInBackground:@selector(downloadInfoInBackground:) withObject:view];
-                  i++;
-             }
-        }
+         if (i < 10){
+              [self performSelectorInBackground:@selector(downloadInfoInBackground:) withObject:[dict objectForKey:@"controller"];
+              i++;
+         }
     }
     [super viewDidAppear:animated];
 }
