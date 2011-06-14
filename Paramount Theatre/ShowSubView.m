@@ -23,6 +23,7 @@
 - (id) initWithId:(int)_uid{
     self = [super init];
     uid = _uid;
+    loaded = FALSE;
     return self;
 }
 

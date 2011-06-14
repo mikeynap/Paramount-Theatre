@@ -25,7 +25,13 @@
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     [temporaryBarButtonItem release];
     self.title = @"Paramount Theatre Events";
-
+    int i = 0;
+    for (NSDictionary *dict in events){
+        if (i < 10){
+            [self performSelectorInBackground:@selector(downloadInfoInBackground) withObject:[dict objectForKey:@"controller"]];
+            i++;
+        }
+    }
     
     
 }
@@ -44,17 +50,10 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    int i = 0;
-    for (NSDictionary *dict in events){
-         if (i < 10){
-              [self performSelectorInBackground:@selector(downloadInfoInBackground:) withObject:[dict objectForKey:@"controller"];
-              i++;
-         }
-    }
     [super viewDidAppear:animated];
+
 }
 
-- (
 
 - (void)viewWillDisappear:(BOOL)animated
 {
