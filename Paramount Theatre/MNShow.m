@@ -17,14 +17,14 @@
     NSDictionary *data = [NSDictionary dictionaryWithContentsOfURL:[NSURL URLWithString:
                                                                     [NSString stringWithFormat:@"http://paramountlive.org/iPhone.php?id=%i", _uid]]]; 
 
-    [data retain];
-    date = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"date"] doubleValue]];
-    title = [data objectForKey:@"title"];
-    uid = [[data objectForKey:@"id"] integerValue];
-    dateAndTime = [data objectForKey:@"dt"];
-    price = [data objectForKey:@"ticket"];
-    description = [data objectForKey:@"desc"];
-    video = [data objectForKey:@"video"];
+
+    self.date = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"date"] doubleValue]];
+    self.title = [data objectForKey:@"title"];
+    self.uid = [[data objectForKey:@"id"] integerValue];
+    self.dateAndTime = [data objectForKey:@"dt"];
+    self.price = [data objectForKey:@"ticket"];
+    self.description = [data objectForKey:@"desc"];
+    self.video = [data objectForKey:@"video"];
     
     NSLog(@"%@ %@", date, description); 
     return self;
