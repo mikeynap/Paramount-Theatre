@@ -510,7 +510,8 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid) {
 			}
 		}
 	} while ((subrange = [self rangeOfString:@"&" options:NSBackwardsSearch range:range]).length != 0);
-	return finalString;
+    
+	return [finalString stringByReplacingOccurrencesOfString:@"\\" withString:@""];
 } // gtm_stringByUnescapingHTML
 
 

@@ -11,14 +11,17 @@
 
 @interface ShowSubView : UIViewController {
     IBOutlet UITextView *text;
-    IBOutlet UILabel *title;
-    IBOutlet UILabel *date;
-    IBOutlet UILabel *price;
+    IBOutlet UILabel *titleLabel;
+    IBOutlet UITextView *dateView;
+    IBOutlet UILabel *priceLabel;
     IBOutlet MNShow *show;
     int uid;
     BOOL loaded;
     
 }
+
+
+
 
 -(id) initWithId:(int)uid;
 - (MNShow *)show;

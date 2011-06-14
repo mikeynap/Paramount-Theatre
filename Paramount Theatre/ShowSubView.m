@@ -45,10 +45,12 @@
 {
     loaded = TRUE;
     show = [[MNShow alloc] initWithId:uid];
-    [super viewDidLoad];
     [text setText:show.description];
     text.font = [UIFont fontWithName:@"Helvetica" size:15];
-    // Do any additional setup after loading the view from its nib.
+    [titleLabel setText:show.title];
+    [priceLabel setText: show.price];
+    [dateView setText:show.dateAndTime];
+    [super viewDidLoad];
 }
 
 - (void)viewDidUnload

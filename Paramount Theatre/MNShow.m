@@ -22,8 +22,8 @@
     uid = [[data objectForKey:@"id"] integerValue];
     dateAndTime = [data objectForKey:@"dt"];
     price = [data objectForKey:@"ticket"];
-    description = [data objectForKey:@"desc"];
-    video = [[data objectForKey:@"video"] gtm_stringByEscapingForAsciiHTML];
+    description = [[data objectForKey:@"desc"] gtm_stringByUnescapingFromHTML];
+    video = [[data objectForKey:@"video"] gtm_stringByUnescapingFromHTML];
     NSLog(@"%@ %@", date, description); 
     return self;
 }
