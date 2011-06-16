@@ -21,7 +21,7 @@
 }
 
 
-
+- (void)openPurchase;
 - (void)getData;
 -(id) initWithId:(int)uid;
 - (MNShow *)show;

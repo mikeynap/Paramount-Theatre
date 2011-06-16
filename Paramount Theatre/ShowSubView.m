@@ -11,6 +11,10 @@
 
 @implementation ShowSubView
 
+- (void)openPurchase{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.paramounttickets.org/Attractions.ashx"]];
+
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,6 +28,8 @@
     self = [super init];
     uid = _uid;
     loaded = FALSE;
+//    [self performSelectorInBackground:@selector(getData) withObject:nil];
+
     return self;
 }
 
@@ -41,8 +47,10 @@
 }
 
 - (void)getData{
+//    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     show = [[MNShow alloc] initWithId:uid];
     loaded = TRUE;
+//    [pool drain];
 }
 
 #pragma mark - View lifecycle
@@ -55,6 +63,11 @@
     [titleLabel setText:show.title];
     [priceLabel setText: show.price];
     [dateView setText:show.dateAndTime];
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"Purchase Ticket"  style: UIBarButtonItemStyleBordered target: self action: @selector(openPurchase)];
+    self.navigationItem.rightBarButtonItem = newBackButton;
+
+    [newBackButton release];
+
     [super viewDidLoad];
 }
 

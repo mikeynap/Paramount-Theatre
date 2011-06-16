@@ -25,13 +25,6 @@
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     [temporaryBarButtonItem release];
     self.title = @"Paramount Theatre Events";
-    int i = 0;
-    for (NSDictionary *dict in events){
-        if (i < 10){
-            [self performSelectorInBackground:@selector(downloadInfoInBackground) withObject:[dict objectForKey:@"controller"]];
-            i++;
-        }
-    }
     
     
 }
@@ -41,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,6 +45,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
 
 }
 
@@ -101,6 +96,13 @@
 
     // Configure the cell.
     [[cell textLabel] setText:[[events objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:[[events objectAtIndex:indexPath.row] objectForKey:@"controller"]];
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title = @"Back";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    [temporaryBarButtonItem release];
+
+    
     return cell;
 }
 
@@ -149,7 +151,13 @@
 {
 
     ShowSubView *targetViewController = [[events objectAtIndex: indexPath.row] objectForKey:@"controller"];
+    
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"Purchase Ticket"  style: UIBarButtonItemStyleBordered target: nil action: nil];
+    targetViewController.navigationItem.rightBarButtonItem = newBackButton;
+    [newBackButton release];
+
     [[self navigationController] pushViewController:targetViewController animated:YES];
+    
 
 }
 
@@ -169,8 +177,10 @@
     // For example: self.myOutlet = nil;
 }
 
-- (void)performSelectorInBackground:(SEL)aSelector withObject:(id)arg{
+- (void)getBackgroundInfo:(id)arg{
+    NSAutoreleasePool *apool = [[NSAutoreleasePool alloc] init];
     [arg getData];
+    [apool drain];
 }
 
 - (void)dealloc
