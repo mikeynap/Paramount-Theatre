@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F54B1ADE13BBC59900FFBB3A /* tmpbg.png in Resources */ = {isa = PBXBuildFile; fileRef = F54B1ADD13BBC59900FFBB3A /* tmpbg.png */; };
+		F54B1AE113BBD23000FFBB3A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F54B1AE013BBD23000FFBB3A /* bg.png */; };
 		F5771EA713A3279700D8208D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5771EA613A3279700D8208D /* UIKit.framework */; };
 		F5771EA913A3279700D8208D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5771EA813A3279700D8208D /* Foundation.framework */; };
 		F5771EAB13A3279700D8208D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5771EAA13A3279700D8208D /* CoreGraphics.framework */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F54B1ADD13BBC59900FFBB3A /* tmpbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpbg.png; sourceTree = "<group>"; };
+		F54B1AE013BBD23000FFBB3A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		F5771EA213A3279700D8208D /* Paramount Theatre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paramount Theatre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5771EA613A3279700D8208D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F5771EA813A3279700D8208D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +120,8 @@
 		F5771EAD13A3279700D8208D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F54B1AE013BBD23000FFBB3A /* bg.png */,
+				F54B1ADD13BBC59900FFBB3A /* tmpbg.png */,
 				F5771EC613A32C6B00D8208D /* icon.icns */,
 				F5A8F2E413A7049E0059DC89 /* icon.png */,
 				F5771EAE13A3279700D8208D /* Paramount Theatre-Info.plist */,
@@ -187,6 +193,8 @@
 				F5771EC713A32C6B00D8208D /* icon.icns in Resources */,
 				F5A8F2C513A479A00059DC89 /* ShowSubView.xib in Resources */,
 				F5A8F2E513A7049E0059DC89 /* icon.png in Resources */,
+				F54B1ADE13BBC59900FFBB3A /* tmpbg.png in Resources */,
+				F54B1AE113BBD23000FFBB3A /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

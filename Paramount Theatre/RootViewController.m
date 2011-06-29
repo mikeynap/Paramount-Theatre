@@ -17,7 +17,8 @@
     for (NSDictionary *dict in data){
         ShowSubView *view = [[ShowSubView alloc] initWithId:[[dict objectForKey:@"id"] integerValue]];
         [dict retain];
-        [events addObject: [NSDictionary dictionaryWithObjectsAndKeys:[dict objectForKey:@"title"] , @"title", view, @"controller",  nil]];
+        [events addObject: [NSDictionary dictionaryWithObjectsAndKeys:[dict objectForKey:@"title"] , @"title", [dict objectForKey:@"dt"], @"date", view, @"controller",  nil]];
+//        [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:view];
         [view release];   
     }
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
@@ -25,7 +26,7 @@
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     [temporaryBarButtonItem release];
     self.title = @"Paramount Theatre Events";
-    
+    self.tableView.backgroundColor = [UIColor clearColor];
     
 }
 
@@ -87,20 +88,35 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.textLabel.adjustsFontSizeToFitWidth = YES;
-        cell.textLabel.numberOfLines = 1;
-        cell.textLabel.minimumFontSize = 10;
+        
+        
+        UILabel *title = [[[UILabel alloc] initWithFrame:CGRectMake(10, 4, 400, 20)] autorelease];    
+        [title setBackgroundColor:[UIColor clearColor]];
+        [title setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:14]];
+        [title setText:[[events objectAtIndex:indexPath.row] objectForKey:@"title"]];
+        [cell addSubview:title];
+        
+        
+        UILabel *subTitle = [[[UILabel alloc] initWithFrame:CGRectMake(10, 17, 480, 30)] autorelease];
+        
+        [subTitle setBackgroundColor:[UIColor clearColor]];
+        [subTitle setAlpha:.8];
+        [subTitle setFont:[UIFont fontWithName:@"HelveticaNeue" size:12]];
+        [subTitle setText:[[events objectAtIndex:indexPath.row] objectForKey:@"date"]];
+        [cell addSubview:subTitle];
+        
+        
+        // Configure the cell.
+        UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+        temporaryBarButtonItem.title = @"Back";
+        self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+        [temporaryBarButtonItem release];
+        
+
+
 
 
     }
-
-    // Configure the cell.
-    [[cell textLabel] setText:[[events objectAtIndex:indexPath.row] objectForKey:@"title"]];
-    [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:[[events objectAtIndex:indexPath.row] objectForKey:@"controller"]];
-    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
-    temporaryBarButtonItem.title = @"Back";
-    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
-    [temporaryBarButtonItem release];
 
     
     return cell;
@@ -151,11 +167,6 @@
 {
 
     ShowSubView *targetViewController = [[events objectAtIndex: indexPath.row] objectForKey:@"controller"];
-    
-    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"Purchase Ticket"  style: UIBarButtonItemStyleBordered target: nil action: nil];
-    targetViewController.navigationItem.rightBarButtonItem = newBackButton;
-    [newBackButton release];
-
     [[self navigationController] pushViewController:targetViewController animated:YES];
     
 

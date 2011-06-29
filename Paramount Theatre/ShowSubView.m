@@ -28,8 +28,12 @@
     self = [super init];
     uid = _uid;
     loaded = FALSE;
-//    [self performSelectorInBackground:@selector(getData) withObject:nil];
-
+    
+    self.view.backgroundColor = [UIColor clearColor];
+    [dateView setBackgroundColor:[UIColor clearColor]];
+    [text setBackgroundColor:[UIColor clearColor]];
+    
+    
     return self;
 }
 
@@ -65,7 +69,7 @@
     [dateView setText:show.dateAndTime];
     UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"Purchase Ticket"  style: UIBarButtonItemStyleBordered target: self action: @selector(openPurchase)];
     self.navigationItem.rightBarButtonItem = newBackButton;
-
+    
     [newBackButton release];
 
     [super viewDidLoad];
