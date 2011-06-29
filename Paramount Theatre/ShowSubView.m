@@ -52,8 +52,10 @@
 
 - (void)getData{
 //    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    show = [[MNShow alloc] initWithId:uid];
-    loaded = TRUE;
+    if (!loaded){
+        show = [[MNShow alloc] initWithId:uid];
+        loaded = TRUE;
+    }
 //    [pool drain];
 }
 
@@ -61,6 +63,7 @@
 
 - (void)viewDidLoad
 {
+
     if (!loaded) [self getData];
     [text setText:show.description];
     text.font = [UIFont fontWithName:@"Helvetica" size:15];

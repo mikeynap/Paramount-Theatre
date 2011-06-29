@@ -114,6 +114,7 @@
         
 
 
+        
 
 
     }
@@ -171,6 +172,12 @@
     
 
 }
+         
+ - (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellAccessoryDisclosureIndicator;
+}
+         
+
 
 - (void)didReceiveMemoryWarning
 {
