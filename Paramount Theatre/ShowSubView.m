@@ -29,9 +29,6 @@
     uid = _uid;
     loaded = FALSE;
     
-    self.view.backgroundColor = [UIColor clearColor];
-    [dateView setBackgroundColor:[UIColor clearColor]];
-    [text setBackgroundColor:[UIColor clearColor]];
     
     
     return self;
@@ -65,8 +62,13 @@
 {
 
     if (!loaded) [self getData];
+    self.view.backgroundColor = [UIColor clearColor];
+    [dateView setBackgroundColor:[UIColor clearColor]];
+    [text setBackgroundColor:[UIColor clearColor]];
+
     [text setText:show.description];
     text.font = [UIFont fontWithName:@"Helvetica" size:15];
+
     [titleLabel setText:show.title];
     [priceLabel setText: show.price];
     [dateView setText:show.dateAndTime];

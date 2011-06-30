@@ -7,6 +7,17 @@
 //
 
 #import "Paramount_TheatreAppDelegate.h"
+#import "ShowSubView.h"
+
+//@interface UINavigationBar (MyCustomNavBar)
+//@end
+//@implementation UINavigationBar (MyCustomNavBar)
+//- (void) drawRect:(CGRect)rect {
+//    UIImage *barImage = [UIImage imageNamed:@"head.jpg"];
+//    [barImage drawInRect:rect];
+//}
+//@end
+
 
 @implementation Paramount_TheatreAppDelegate
 
@@ -17,13 +28,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	
+    
+
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
-    self.window.rootViewController = self.navigationController;
 //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
+    self.window.rootViewController = self.navigationController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)onSplashScreenExpired:(id)info{
+    [splash.view removeFromSuperview];
+    [self.window makeKeyAndVisible];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

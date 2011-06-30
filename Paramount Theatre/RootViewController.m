@@ -13,11 +13,31 @@
 
 - (void)awakeFromNib{
     events = [[NSMutableArray alloc] init];
+//    splash = [[UIViewController alloc] init];
+//    splash.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"head.jpg"]];
+    splash = [[UIViewController alloc] init];
+    [[splash view] addSubview: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]]]; 
+    [[self tableView] setHidden:YES];
+	id delegate = [[UIApplication sharedApplication] delegate];
+    [[[[delegate window] subviews] objectAtIndex:0] setHidden:YES];
+    [[delegate window] addSubview:splash.view];
+    NSLog(@"%@", [delegate window]);
+    
+	[NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(onSplashScreenExpired:) userInfo:nil repeats:NO];
+    
+    // Override point for customization after application launch.
+    // Add the navigation controller's view to the window and display.
+    //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
+    [[delegate window] makeKeyAndVisible];
+
+    NSLog(@"AWAKE!");
     NSArray *data = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://paramountlive.org/iPhone.php"]];
     for (NSDictionary *dict in data){
         ShowSubView *view = [[ShowSubView alloc] initWithId:[[dict objectForKey:@"id"] integerValue]];
         [dict retain];
-//        [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:view];
+        [events addObject: [NSDictionary dictionaryWithObjectsAndKeys:[dict objectForKey:@"title"] , @"title", [dict objectForKey:@"dt"], @"date", view, @"controller",  nil]];
+
+        [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:view];
         [view release];   
     }
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
@@ -25,8 +45,22 @@
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     [temporaryBarButtonItem release];
     self.title = @"Paramount Theatre Events";
-    self.tableView.backgroundColor = [UIColor clearColor];
     
+    
+    
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorColor = [UIColor colorWithRed:.5 green:.5 blue:.5 alpha:1];
+    
+}
+
+- (void)onSplashScreenExpired:(id)info{
+	id delegate = [[UIApplication sharedApplication] delegate];
+    [[self tableView] setHidden:NO];
+    [splash.view removeFromSuperview];
+    [[[[delegate window] subviews] objectAtIndex:0] setHidden:NO];
+//    self.window.rootViewController = self.navigationController;
+//    [self.window makeKeyAndVisible];
 }
 
 
@@ -89,19 +123,19 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         
         
-        UILabel *title = [[[UILabel alloc] initWithFrame:CGRectMake(10, 4, 400, 20)] autorelease];    
+        UILabel *title = [[[UILabel alloc] initWithFrame:CGRectMake(10, 4, 280, 20)] autorelease];    
         [title setBackgroundColor:[UIColor clearColor]];
-        [title setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:14]];
-        [title setText:[[events objectAtIndex:indexPath.row] objectForKey:@"title"]];
+        [title setAdjustsFontSizeToFitWidth:YES];
+        [title setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:15]];
         [cell addSubview:title];
         
         
-        UILabel *subTitle = [[[UILabel alloc] initWithFrame:CGRectMake(10, 17, 480, 30)] autorelease];
+        UILabel *subTitle = [[[UILabel alloc] initWithFrame:CGRectMake(10, 17, 320, 30)] autorelease];
         
         [subTitle setBackgroundColor:[UIColor clearColor]];
         [subTitle setAlpha:.8];
-        [subTitle setFont:[UIFont fontWithName:@"HelveticaNeue" size:12]];
-        [subTitle setText:[[events objectAtIndex:indexPath.row] objectForKey:@"date"]];
+        [subTitle setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
+//        [subTitle setText:[[events objectAtIndex:indexPath.row] objectForKey:@"date"]];
         [cell addSubview:subTitle];
         
         
@@ -111,12 +145,13 @@
         self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
         [temporaryBarButtonItem release];
         
-
-
-        
-
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     }
+    // Access the Subviews we added above, which are at index 1 and 2 and set the value
+    [[[cell subviews] objectAtIndex:1] setText:[[events objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    [[[cell subviews] objectAtIndex:2] setText:[[events objectAtIndex:indexPath.row] objectForKey:@"date"]];
+
 
     
     return cell;
@@ -172,9 +207,6 @@
 
 }
          
- - (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellAccessoryDisclosureIndicator;
-}
          
 
 

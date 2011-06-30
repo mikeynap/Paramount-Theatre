@@ -11,6 +11,7 @@
 @interface RootViewController : UITableViewController {
     
     NSMutableArray *events;
+    UIViewController *splash;
     
 }
 

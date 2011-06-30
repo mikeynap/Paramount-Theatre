@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ShowSubView;
 
 @interface Paramount_TheatreAppDelegate : NSObject <UIApplicationDelegate> {
-
+    ShowSubView *splash;
 }
+
+- (void)onSplashScreenExpired:(id)info;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

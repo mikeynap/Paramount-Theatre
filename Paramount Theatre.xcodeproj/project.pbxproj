@@ -24,6 +24,7 @@
 		F5A8F2E013A5C93F0059DC89 /* MNShow.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A8F2DF13A5C93F0059DC89 /* MNShow.m */; };
 		F5A8F2E313A5D0A70059DC89 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A8F2E213A5D0A70059DC89 /* GTMNSString+HTML.m */; };
 		F5A8F2E513A7049E0059DC89 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A8F2E413A7049E0059DC89 /* icon.png */; };
+		F5E5D7E813BC4A600044B1A1 /* head.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5E5D7E713BC4A5F0044B1A1 /* head.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F5A8F2E113A5D0A70059DC89 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		F5A8F2E213A5D0A70059DC89 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		F5A8F2E413A7049E0059DC89 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F5E5D7E713BC4A5F0044B1A1 /* head.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		F5771EAD13A3279700D8208D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5E5D7E713BC4A5F0044B1A1 /* head.jpg */,
 				F54B1AE013BBD23000FFBB3A /* bg.png */,
 				F54B1ADD13BBC59900FFBB3A /* tmpbg.png */,
 				F5771EC613A32C6B00D8208D /* icon.icns */,
@@ -195,6 +198,7 @@
 				F5A8F2E513A7049E0059DC89 /* icon.png in Resources */,
 				F54B1ADE13BBC59900FFBB3A /* tmpbg.png in Resources */,
 				F54B1AE113BBD23000FFBB3A /* bg.png in Resources */,
+				F5E5D7E813BC4A600044B1A1 /* head.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
