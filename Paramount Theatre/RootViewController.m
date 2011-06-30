@@ -17,7 +17,6 @@
     for (NSDictionary *dict in data){
         ShowSubView *view = [[ShowSubView alloc] initWithId:[[dict objectForKey:@"id"] integerValue]];
         [dict retain];
-        [events addObject: [NSDictionary dictionaryWithObjectsAndKeys:[dict objectForKey:@"title"] , @"title", [dict objectForKey:@"dt"], @"date", view, @"controller",  nil]];
 //        [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:view];
         [view release];   
     }
