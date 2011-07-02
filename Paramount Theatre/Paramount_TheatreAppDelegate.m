@@ -26,6 +26,32 @@
 
 @synthesize navigationController=_navigationController;
 
+-(void)awakeFromNib{
+    
+    //    splash = [[UIViewController alloc] init];
+    //    splash.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"head.jpg"]];
+//    splash = [[UIViewController alloc] init];
+//    [[splash view] addSubview: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]]]; 
+//    [[[[self window] subviews] objectAtIndex:0] setHidden:YES];
+//    [[self navigationController] setNavigationBarHidden:YES];
+//    [[self window] addSubview:splash.view];
+    
+//	[NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(onSplashScreenExpired:) userInfo:nil repeats:NO];
+    
+    // Override point for customization after application launch.
+    // Add the navigation controller's view to the window and display.
+    //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
+    self.window.rootViewController = self.navigationController;
+    [self.window makeKeyAndVisible];
+
+
+}
+
+//- (void)applicationDidFinishLaunching:(UIApplication *)application{
+//	NSLog(@"Registering for remote notifications"); 
+//	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+//}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	
@@ -34,16 +60,48 @@
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
 //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
-    self.window.rootViewController = self.navigationController;
+	NSLog(@"Registering for remote notifications"); 
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
 
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
+
 - (void)onSplashScreenExpired:(id)info{
+
     [splash.view removeFromSuperview];
-    [self.window makeKeyAndVisible];
+    [[[[self window] subviews] objectAtIndex:0] setHidden:NO];
+    [[self navigationController] setNavigationBarHidden:NO];
+    
+    //    self.window.rootViewController = self.navigationController;
+    //    [self.window makeKeyAndVisible];
 }
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([defaults boolForKey:@"didRegesterToken"] == NO){
+        NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+        token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://paramountlive.org/push.php?m=new&token=%@", token]];
+        NSMutableURLRequest *urlRequest=[NSMutableURLRequest requestWithURL:url];
+        [NSURLConnection connectionWithRequest:urlRequest delegate:self];
+        NSLog(@"Sent Request");
+    }
+    
+    [defaults setBool:YES forKey:@"didRegesterToken"];
+    
+    NSLog(@"device Token is:%@", deviceToken);
+    
+    // this is the what you need to put into your PHP apns server
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"Failed to register for push %d %@", [error code], [error userInfo]);
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -74,6 +132,7 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

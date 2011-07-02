@@ -252,7 +252,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -262,6 +263,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
+				PROVISIONING_PROFILE = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -270,7 +273,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Napolitano (4M9D3U8B49)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -278,6 +282,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -295,8 +301,8 @@
 				INFOPLIST_FILE = "Paramount Theatre/Paramount Theatre-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
+				PROVISIONING_PROFILE = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
 				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
@@ -314,8 +320,8 @@
 				INFOPLIST_FILE = "Paramount Theatre/Paramount Theatre-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47B6E1F5-A68C-4032-8490-5D5BF2803A39";
+				PROVISIONING_PROFILE = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9CC6550C-8790-4E87-866A-7F7EFB9E8930";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

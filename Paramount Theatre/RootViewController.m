@@ -12,34 +12,35 @@
 @implementation RootViewController
 
 - (void)awakeFromNib{
+
     events = [[NSMutableArray alloc] init];
 //    splash = [[UIViewController alloc] init];
 //    splash.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"head.jpg"]];
-    splash = [[UIViewController alloc] init];
-    [[splash view] addSubview: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]]]; 
-    [[self tableView] setHidden:YES];
-	id delegate = [[UIApplication sharedApplication] delegate];
-    [[[[delegate window] subviews] objectAtIndex:0] setHidden:YES];
-    [[delegate window] addSubview:splash.view];
-    NSLog(@"%@", [delegate window]);
-    
-	[NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(onSplashScreenExpired:) userInfo:nil repeats:NO];
-    
-    // Override point for customization after application launch.
-    // Add the navigation controller's view to the window and display.
-    //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
-    [[delegate window] makeKeyAndVisible];
-
-    NSLog(@"AWAKE!");
+//    splash = [[UIViewController alloc] init];
+//    [[splash view] addSubview: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]]]; 
+//    [[self tableView] setHidden:YES];
+//	id delegate = [[UIApplication sharedApplication] delegate];
+//    [[[[delegate window] subviews] objectAtIndex:0] setHidden:YES];
+//    [[delegate navigationController] setNavigationBarHidden:YES];
+//    [[delegate window] addSubview:splash.view];
+//    
+//	[NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(onSplashScreenExpired:) userInfo:nil repeats:NO];
+//    
+//    // Override point for customization after application launch.
+//    // Add the navigation controller's view to the window and display.
+//    //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
+//    [[delegate window] makeKeyAndVisible];
     NSArray *data = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://paramountlive.org/iPhone.php"]];
+    NSLog(@"Downloaded Dates");
     for (NSDictionary *dict in data){
         ShowSubView *view = [[ShowSubView alloc] initWithId:[[dict objectForKey:@"id"] integerValue]];
         [dict retain];
         [events addObject: [NSDictionary dictionaryWithObjectsAndKeys:[dict objectForKey:@"title"] , @"title", [dict objectForKey:@"dt"], @"date", view, @"controller",  nil]];
-
+        
         [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:view];
         [view release];   
     }
+    NSLog(@"AWAKE!");
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title = @"Back";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
@@ -54,11 +55,14 @@
     
 }
 
+
 - (void)onSplashScreenExpired:(id)info{
 	id delegate = [[UIApplication sharedApplication] delegate];
     [[self tableView] setHidden:NO];
     [splash.view removeFromSuperview];
     [[[[delegate window] subviews] objectAtIndex:0] setHidden:NO];
+    [[delegate navigationController] setNavigationBarHidden:NO];
+
 //    self.window.rootViewController = self.navigationController;
 //    [self.window makeKeyAndVisible];
 }
@@ -69,6 +73,8 @@
 {
     [super viewDidLoad];
 
+
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,6 +84,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+
     [super viewDidAppear:animated];
     
 
