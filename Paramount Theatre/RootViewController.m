@@ -30,6 +30,23 @@
 //    // Add the navigation controller's view to the window and display.
 //    //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
 //    [[delegate window] makeKeyAndVisible];
+    NSLog(@"AWAKE!");
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title = @"Back";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    [temporaryBarButtonItem release];
+    self.title = @"Events";
+    
+    [self performSelectorInBackground:@selector(getData) withObject:nil];
+    
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorColor = [UIColor colorWithRed:.5 green:.5 blue:.5 alpha:1];
+    
+}
+
+- (void)getData{
+    NSAutoreleasePool *apool = [[NSAutoreleasePool alloc] init];
     NSArray *data = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://paramountlive.org/iPhone.php"]];
     NSLog(@"Downloaded Dates");
     for (NSDictionary *dict in data){
@@ -40,19 +57,10 @@
         [self performSelectorInBackground:@selector(getBackgroundInfo:) withObject:view];
         [view release];   
     }
-    NSLog(@"AWAKE!");
-    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
-    temporaryBarButtonItem.title = @"Back";
-    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
-    [temporaryBarButtonItem release];
-    self.title = @"Paramount Theatre Events";
-    
-    
-    
-    
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorColor = [UIColor colorWithRed:.5 green:.5 blue:.5 alpha:1];
-    
+
+    [self.tableView reloadData];
+    [apool drain];
+
 }
 
 

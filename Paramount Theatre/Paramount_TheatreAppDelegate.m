@@ -23,59 +23,36 @@
 
 
 @synthesize window=_window;
-
+@synthesize tabBarController;
 @synthesize navigationController=_navigationController;
 
--(void)awakeFromNib{
-    
-    //    splash = [[UIViewController alloc] init];
-    //    splash.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"head.jpg"]];
-//    splash = [[UIViewController alloc] init];
-//    [[splash view] addSubview: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]]]; 
-//    [[[[self window] subviews] objectAtIndex:0] setHidden:YES];
-//    [[self navigationController] setNavigationBarHidden:YES];
-//    [[self window] addSubview:splash.view];
-    
-//	[NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(onSplashScreenExpired:) userInfo:nil repeats:NO];
-    
-    // Override point for customization after application launch.
-    // Add the navigation controller's view to the window and display.
-    //    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
-    self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
-
-
-}
-
-//- (void)applicationDidFinishLaunching:(UIApplication *)application{
-//	NSLog(@"Registering for remote notifications"); 
-//	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
-//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	
+    	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
     
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    
+    UIViewController *splash = [[[UIViewController alloc] init] autorelease];
+    splash.title = @"About";
+    UIViewController *tickets = [[[UIViewController alloc] init] autorelease];
+    tickets.title = @"Tickets";
+    UIWebView *ticketView = [[[UIWebView alloc] init] autorelease];
+    [ticketView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://paramounttickets.org"]]];
+//    _navigationController.tabBarItem.image = [UIImage imageNamed:@"icon.png"];
+    NSArray* controllers = [NSArray arrayWithObjects:splash, [_navigationController autorelease], sponsors, nil];
+  // ??? MAYBE???  [_navigationController release];
+    tabBarController.viewControllers = controllers;
 
-    // Override point for customization after application launch.
-    // Add the navigation controller's view to the window and display.
-//    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]];
-	NSLog(@"Registering for remote notifications"); 
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+    
+    // Add the tab bar controller's current view as a subview of the window
+    [self.window addSubview:tabBarController.view];
 
     return YES;
 }
 
 
-- (void)onSplashScreenExpired:(id)info{
-
-    [splash.view removeFromSuperview];
-    [[[[self window] subviews] objectAtIndex:0] setHidden:NO];
-    [[self navigationController] setNavigationBarHidden:NO];
-    
-    //    self.window.rootViewController = self.navigationController;
-    //    [self.window makeKeyAndVisible];
-}
 
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{

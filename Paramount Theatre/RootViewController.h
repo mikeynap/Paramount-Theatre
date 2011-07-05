@@ -16,7 +16,6 @@
 }
 
 
-- (int)test;
-- (void)getDates;
+- (void)getData;
 
 @end

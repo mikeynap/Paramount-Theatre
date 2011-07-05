@@ -10,13 +10,13 @@
 
 
 @interface Paramount_TheatreAppDelegate : NSObject <UIApplicationDelegate> {
-    UIViewController *splash;
+    UITabBarController *tabBarController;
+    
 }
 
-- (void)onSplashScreenExpired:(id)info;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
+@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @end
