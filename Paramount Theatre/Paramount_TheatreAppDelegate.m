@@ -8,6 +8,7 @@
 
 #import "Paramount_TheatreAppDelegate.h"
 #import "ShowSubView.h"
+#import "AboutSubView.h"
 
 //@interface UINavigationBar (MyCustomNavBar)
 //@end
@@ -34,17 +35,20 @@
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     
-    UIViewController *splash = [[[UIViewController alloc] init] autorelease];
-    splash.title = @"About";
+    AboutSubView *about = [[[AboutSubView alloc] init] autorelease];
+    about.title = @"About";
     UIViewController *tickets = [[[UIViewController alloc] init] autorelease];
     tickets.title = @"Tickets";
-    UIWebView *ticketView = [[[UIWebView alloc] init] autorelease];
-    [ticketView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://paramounttickets.org"]]];
+    UIWebView *ticketView = [[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 420)] autorelease];
+    ticketView.scalesPageToFit = YES;
+    [ticketView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.paramounttickets.org/Attractions.ashx"]]];
+    [tickets.view addSubview:ticketView];
+    [_window setBackgroundColor:[UIColor clearColor]];
 //    _navigationController.tabBarItem.image = [UIImage imageNamed:@"icon.png"];
-    NSArray* controllers = [NSArray arrayWithObjects:splash, [_navigationController autorelease], sponsors, nil];
+    NSArray* controllers = [NSArray arrayWithObjects:about, [_navigationController autorelease], tickets, nil];
   // ??? MAYBE???  [_navigationController release];
     tabBarController.viewControllers = controllers;
-
+    
     
     // Add the tab bar controller's current view as a subview of the window
     [self.window addSubview:tabBarController.view];

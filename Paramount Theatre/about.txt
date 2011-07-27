@@ -1,0 +1,32 @@
+<style type="text/css">
+body{
+    padding: 10px;
+    background-color: #ccc;
+}
+p {
+    font-size:22px;
+    line-height:30px;
+    font-family: "HelveticaNeue";
+    
+}
+
+
+</style>
+<body>
+<p><img src="histfrnt.gif" align='left' style='padding-right:20px'>
+In the early part of the 20th century, many called The Playhouse Theatre of Rutland, Vermont one of the finest theatres in America and very few, reportedly, were more artistically designed or appointed. Built in 1912 &amp; 1913 by George T. Chaffee. The Theatre opened on January 16, 1914. The classical style exterior architecture of the building reflected the &quot;City Beautiful&quot; movement of the time, while the interior took on the look of a Victorian opera house. The theatre provided seating for 1000 patrons in the orchestra, balcony, and 6 boxes flanking the proscenium arch.</p>
+<p>Du Barry rose tapestry covered the side-walls, and velour hangings of the same shade adorned the boxes. The ceilings were beautifully decorated with gold leaf, and a large oval painting representing music, lyric art, and the dramas shown among the 150 softly glowing incandescent ceiling lights. The floors of the auditorium, aisles, boxes, and lobby were carpeted in green with wilton.</p>
+<p>Top performers traveling via the Rutland Railroad between Montreal and Boston, would stop to perform in The Playhouse. Minstrel shows, grand and light opera, and vaudeville, and appearances by Tom Thumb, Will Rogers, Sarah Bernhardt, Ethel Barrymore, and The Great Houdini, delighted local audiences.</p>
+<p>During the disastrous flood of 1927, while water lapped at the foundation, the theatre provided refuge for Rutland residents driven out of their homes in lower parts of the city</p>
+
+<p><img src='oldshowtime.jpg' align='right' />When &quot;talking pictures&quot; came to town, The Playhouse embraced the movie phenomenon, and as a motion picture theatre, was renamed The Paramount, in 1931. Presentations alternated between &quot;talkies&quot; and vaudeville, until film finally supplanted live performance in popularity. The movies of the 1930s, frivolous or sentimental, were screened at the Paramount; &quot;Gone with the Wind&quot;, among others, attracted huge audiences.</p>
+<p>The onset of World War II brought more patriotic and inspirational films to the stage. This patriotism and inspiration gripped the community as Rutland members of the 43rd Infantry Division were given a farewell send off from the stage in the summer of 1941. Later, rallies to raise pledges for war bonds were conducted in the theatre.</p>
+<p>Activity continued through the 1950s and 1960s and scores of Rutland residents, who later became prominent in business or politics, got their start as ushers or projectionists. In the 1970s, however, like many small theatres across the country, The Movies, as the theatre was now known, paralleled the decline of the film industry, and closed its doors in 1975.</p>
+
+<p>The theatre sat empty and neglected for nearly a decade, until the Center on the Alley, Inc. was formed to purchase the theatre for use as a performing arts center. In 1985, the Paramount Theatre was mortgaged to the Paramount Center, Inc. and three years later the organization assumed ownership of the property. Although in a state of disrepair, the theatre was structurally sound and essentially intact, with much of its decorative detailing remaining.</p>
+<p>As a result of recommendations of architectural and feasibility studies begun in the mid 1980s and early 1990s, the Richardson Block building, adjacent to the theatre, was purchased in 1995 with an eye toward future expansion. The architectural firm of Nimtz - Berryhill - Figiel developed the plan uniting the two buildings, combining modern amenities with a fully restored 850 seat historic theatre.</p>
+<p>In January of 1999 the John A. Russell Corporation was selected as the construction manager for the historic restoration, and construction began that spring. Extensive historic research was conducted to determine original colors and textures, and the Du Barry rose fabric stretched over the wall surfaces was recreated by the F. Schumacher Company of New York. Artisans began the daunting tasks of repairing the damaged ornamental plaster, retouching the stenciled ceiling, and of reapplying gold leaf to plaster surfaces.</p>
+<p>The successful restoration of the Paramount Theatre was completed in February 2000 and an Opening Night Gala in March 2000 honored the artisans and contributors who made the historic project possible.</p>
+<p>Once again, the Paramount Theatre has assumed its role as an arts, cultural, and educational leader, and as a significant and valuable community resource. We're proud of what we have to offer and hope that you will support us in celebrating community and creativity.</p>
+<p><span class="footer2">We hope to see you at the Theatre often!</span></p>
+</body>

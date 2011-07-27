@@ -12,8 +12,10 @@
 @implementation ShowSubView
 
 - (void)openPurchase{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.paramounttickets.org/Attractions.ashx"]];
-
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.paramounttickets.org/Attractions.ashx"]];
+    id del = [[UIApplication sharedApplication] delegate];
+    [[del tabBarController] setSelectedIndex:2];
+    
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

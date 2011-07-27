@@ -35,7 +35,7 @@
     temporaryBarButtonItem.title = @"Back";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     [temporaryBarButtonItem release];
-    self.title = @"Events";
+    self.title = @"Shows";
     
     [self performSelectorInBackground:@selector(getData) withObject:nil];
     
@@ -64,16 +64,6 @@
 }
 
 
-- (void)onSplashScreenExpired:(id)info{
-	id delegate = [[UIApplication sharedApplication] delegate];
-    [[self tableView] setHidden:NO];
-    [splash.view removeFromSuperview];
-    [[[[delegate window] subviews] objectAtIndex:0] setHidden:NO];
-    [[delegate navigationController] setNavigationBarHidden:NO];
-
-//    self.window.rootViewController = self.navigationController;
-//    [self.window makeKeyAndVisible];
-}
 
 
 
